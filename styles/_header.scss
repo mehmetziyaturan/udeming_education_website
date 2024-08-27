@@ -1,0 +1,70 @@
+@import "variables.scss";
+@import "global";
+
+header{
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 27px 17px;
+    @extend .flex;
+    justify-content: space-between;
+    // logo kısım 
+    .logo{
+        color: $text-color;
+        font-size: 33px;
+        font-weight: 700;
+        span{
+            color: $main-color;
+        }
+    }
+    // navbar kısım 
+    .navbar{
+        // background-color: aqua;
+        @extend .flex;
+        a {
+            color: $text-color;
+            font-size: $p-font;
+            font-weight: 500;
+            margin: 15PX 22px;
+            @extend .transition;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+    .header-right{
+        @extend .flex;
+        a{
+            font-size: 20px;
+            color: $text-color;
+            margin-right: 18px;
+            margin-left: 5px;
+            @extend .transition;
+
+            &:hover{
+                color: $main-color;
+                transform: translateY(-3px);
+            }
+        }
+        a:first-child{
+            font-size: $p-font;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+// Responsive
+@media(max-width:1230px){
+    .navbar li {
+        display: none;
+    }
+}
+
+@media(max-width:700px){
+    .header-right a {
+        display: none;
+    }
+}

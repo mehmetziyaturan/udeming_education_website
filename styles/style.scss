@@ -1,0 +1,57 @@
+// google fonts 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// css sıfırlama 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+// Scss İmportları
+@import "variables.scss";
+@import "./header";
+@import "./main.scss";
+@import "./global";
+@import "./educationinfo";
+@import "./aboutus";
+@import "./topEducations";
+@import "./contactUs";
+@import "./footer";
+
+
+
+// ortak ccsler
+body{
+    background-color: $bg-color;
+    color: $bg-color;
+    font-family: "Open Sans", sans-serif;
+    color: $text-color;
+}
+
+section{
+    padding: 70px 17% 60px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 13px 40px;
+    background-color: $main-color;
+    color: $bg-color;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    @extend .transition;
+    &:hover{
+        background-color: transparent;
+        color: $text-color;
+        border: 2px solid $text-color;
+        transform: translateX(10px);
+    }
+}
